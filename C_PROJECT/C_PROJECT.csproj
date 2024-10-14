@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Components\Pages\TicTacToe.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Components\Pages\TicTacToe.razor.css" />
+  </ItemGroup>
+
 </Project>
