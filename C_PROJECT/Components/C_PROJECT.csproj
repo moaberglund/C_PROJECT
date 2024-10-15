@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Components\C_PROJECT.csproj" />
-    <None Include="Components\C_PROJECT.csproj.user" />
+    <None Remove="Components\Pages\TicTacToe.razor.css" />
+  </ItemGroup>
+	
+	<!-- Ändra från Compile till RazorCSSFiles -->
+  <ItemGroup>
+    <RazorCSSFiles Include="Components\Pages\TicTacToe.razor.css" />
   </ItemGroup>
 
 </Project>
