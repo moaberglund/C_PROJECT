@@ -8,17 +8,17 @@
 
 <div class="content">
     @*Create board of rows and columns*@
-    <div class="container">
+    <div class="container" height="35rem" width="35rem" display="grid" grid-template-rows="repeat(3, 10rem)"
+    grid-template-columns="repeat(3, 10rem)" gap="5px" margin="0 auto">
 
-        @for(int row = 0; row < 3; row++)
+        @for (int row = 0; row < 3; row++)
         {
-                for(int col = 0; col < 3; col++)
-                {
-                    <div class="cell">
-                       
-                    </div>
-                }
-        
+            for (int col = 0; col < 3; col++)
+            {
+                <div class="cell" height="100%" width="100%" background-color= "#0A2464">
+                </div>
+            }
+
         }
 
     </div>
