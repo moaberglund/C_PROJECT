@@ -17,8 +17,10 @@
 
         // Funktionen för att göra ett drag
         // Gör asynkron => async Task
-        private async Task MakeaMove(int row, int col)
+        private void MakeaMove(int row, int col)
         {
+            Console.WriteLine("Klick!"); 
+
             // Kolla om ruta är ledig
             if (board[row, col] != ' ')
             {
@@ -41,6 +43,13 @@
         private void RestartGame()
         {
     
+        }
+
+
+        // Ny metod för testknappen
+        private void TestButtonClick()
+        {
+            Console.WriteLine("Button clicked!"); // Detta borde loggas i konsolen
         }
     }
 }

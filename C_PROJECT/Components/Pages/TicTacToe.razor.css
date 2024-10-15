@@ -13,10 +13,15 @@
     width: 100%;
     background-color: #0A2464;
     cursor: pointer;
-    font-size: 8rem;
-    color: white;
+   
 }
 
     .cell:hover {
         background-color: #3A0647;
     }
+
+h4 {
+    height: 100%;
+    font-size: 8rem;
+    color: white;
+}

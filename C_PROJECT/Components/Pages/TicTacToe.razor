@@ -16,7 +16,7 @@
             for (int col = 0; col < 3; col++)
             {
                 // Skapa lyssnare när spelaren klickar på cellen, kalla på funktion
-                <div class="cell" @onclick="async () => await MakeaMove(row, col)">
+                <div class="cell" @onclick=" () => MakeaMove(row, col)">
                     <h4>@board[row, col]</h4>
                 </div>
             }
@@ -24,6 +24,8 @@
         }
 
     </div>
+    <!-- Testknapp för att logga till konsolen -->
+    <button @onclick="TestButtonClick">Test Button</button>
 
 
     <div>
