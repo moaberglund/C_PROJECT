@@ -100,5 +100,27 @@
         }
 
 
+        // Funktion för att kolla om det är oavgjort
+        // Bör anropas innuti MakeaMove framöver
+
+        private bool CheckDraw()
+        {
+            // Om någon ruta är tom, så är det inte oavgjort
+            for (int row = 0; row < 3; row++)
+            {
+                for (int col = 0; col < 3; col++)
+                {
+                    if (board[row, col] == ' ')
+                    {
+                        return false; //Brädet är inte fullt
+                    }
+                }
+            }
+
+            // Om alla rutor är fyllda, är det oavgjort
+            return true;
+        }
+
+
     }
 }
