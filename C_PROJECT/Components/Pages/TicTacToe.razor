@@ -12,9 +12,12 @@
 
         @for (int row = 0; row < 3; row++)
         {
+
             for (int col = 0; col < 3; col++)
             {
-                <div class="cell">
+                // Skapa lyssnare när spelaren klickar på cellen, kalla på funktion
+                <div class="cell" @onclick="async () => await MakeaMove(row, col)">
+                    <h4>@board[row, col]</h4>
                 </div>
             }
 
@@ -28,8 +31,3 @@
     </div>
 
 </div>
-
-
-@code {
-
-}

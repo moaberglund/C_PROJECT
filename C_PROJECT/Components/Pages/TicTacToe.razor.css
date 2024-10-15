@@ -1,6 +1,4 @@
-﻿body {
-}
-.container {
+﻿.container {
     height: 35rem;
     width: 35rem;
     display: grid;
@@ -14,4 +12,11 @@
     height: 100%;
     width: 100%;
     background-color: #0A2464;
+    cursor: pointer;
+    font-size: 8rem;
+    color: white;
 }
+
+    .cell:hover {
+        background-color: #3A0647;
+    }
