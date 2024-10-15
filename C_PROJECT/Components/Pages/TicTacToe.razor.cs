@@ -51,5 +51,54 @@
         {
             Console.WriteLine("Button clicked!"); // Detta borde loggas i konsolen
         }
+
+
+
+        //
+        //------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------
+        //
+
+        // NY KOD SOM INTE ANVÄNDS ÄNNU - FELSÖK FÖRST ATT MAN KAN KLICKA
+        // Funktion för att kolla om någon har vunnit
+        // Bör anropas innuti MakeaMove framöver
+        private char CheckWinner()
+        {
+            // Kontrollera rader (3 av samma av antingen X eller O och ej tom ' ')
+            for (int row = 0; row < 3; row++)
+            {
+                if (board[row, 0] == board[row, 1] && board[row, 1] == board[row, 2] && board[row, 0] != ' ')
+                {
+                    return board[row, 0]; // Returnera vinnaren ('X' eller 'O')
+                }
+            }
+
+            // Kontrollera kolumner
+            for (int col = 0; col < 3; col++)
+            {
+                if (board[0, col] == board[1, col] && board[1, col] == board[2, col] && board[0, col] != ' ')
+                {
+                    return board[0, col];
+                }
+            }
+
+            // Kontrollera diagonaler
+            // Diagonal neråt
+            if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && board[0, 0] != ' ')
+            {
+                return board[0, 0];
+            }
+            // Diagonal uppåt
+            if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && board[0, 2] != ' ')
+            {
+                return board[0, 2];
+            }
+
+            // Ingen vinnare ännu
+            return ' ';
+        }
+
+
     }
 }
